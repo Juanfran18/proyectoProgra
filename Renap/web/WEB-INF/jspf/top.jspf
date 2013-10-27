@@ -1,0 +1,23 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div id="topPan">
+	<a href="index.html"><img src="images/logo.gif" alt="Education Zone" width="245" height="37" border="0"  class="logo" title="Education Zone"/></a>
+	<p>Registramos lo mas valioso de Guatemala, su gente.</p>
+		
+  <div id="topContactPan">
+  </div>
+	<div id="topMenuPan">
+	  <div id="topMenuLeftPan"></div>
+	  
+	  <div id="topMenuMiddlePan">
+	  	<ul>
+			<li><a href="#">Inicio</li>
+			<li><a href="#">Inscribir persona</li>
+			<li><a href="#">Consulta</a></li>
+			<li><a href="#">books</a></li>			
+			<li class="contact"><a href="#" class="contact">Contact</a></li>
+		</ul>
+	  </div>
+	  
+	</div>
+</div>

@@ -1,0 +1,54 @@
+/* 
+    Document   : estilo
+    Created on : 20/10/2013, 07:40:46 PM
+    Author     : francisco
+    Description:
+        Purpose of the stylesheet follows.
+*/
+/*CSS Document */
+body{padding:0px; margin:0px; background:url(../images/mainbg.gif) 0 0 repeat-x #fff; color:#5E5E5E; font:13px/18px Arial, Helvetica, sans-serif;}
+div, p, ul, h2, h3, img{padding:0px; margin:0px;}
+ul{list-style-type:none;}
+
+/*----TOP PANEL----*/
+#topPan{width:778px; height:158px; position:relative; margin:0 auto; background:url(../images/topPan-bg.gif) 0 0 repeat-x #15AEFD; color:#fff; padding:0px;}
+#topPan img.logo{width:245px; height:37px; position:absolute; top:33px; left:43px;}
+#topPan img.book{width:158px; height:99px; position:absolute; top:20px; right:46px;}
+
+#topPan p{font-size:16px; padding:70px 0 0 43px;}
+
+#topContactPan{width:159px; height:51px; position:absolute; top:43px; right:240px;}
+#topContactPan p.callus{background:#0C71A4; color:#fff; width:64px; height:14px; line-height:14px; font-size:14px; font-weight:bold; text-transform:uppercase; padding:0px;}
+#topContactPan p.no{font-size:26px; padding:4px 0 0;}
+
+#topMenuPan{width:683px; height:16px; position:absolute; bottom:9px; left:48px;}
+#topMenuMiddlePan{width:544px; height:16px; float:left;}
+
+#topMenuMiddlePan ul{width:650px; height:auto;}
+#topMenuMiddlePan ul li{width:110px; height:auto; border-right:8px solid #E5E5E5; float:left;}
+#topMenuMiddlePan ul li a{width:110px; height:auto; display:block; background:#fff; color:#4A4A4A; font:12px/16px "Trebuchet MS",Arial, Helvetica, sans-serif; text-decoration:none; font-weight:bold; text-align:center; text-transform:uppercase;}
+#topMenuMiddlePan ul li a:hover{background:#fff; color:#0574AF; text-decoration:none;}
+/*----/TOP PANEL----*/
+
+/*----Body---*/
+#body{width:778px; height:158px; position:relative; margin:0 auto;}
+
+/*----/Body---*/
+
+/*----FOOTER PANEL----*/
+#footermainPan{height:85px; background:url(../images/footerbg.gif) 0 0 repeat-x #fff; color:#010101; clear:both; padding:72px 0 0;}
+
+#footerPan{width:683px; position:relative; margin:0 auto; font-family:"Trebuchet MS",Arial, Helvetica, sans-serif}
+
+#footerPan ul{width:624px; position:relative; margin:0 auto;}
+#footerPan li{float:left; }
+#footerPan ul li a{padding:0 10px 0; color:#010101; background:#F3F3F3; text-decoration:none;}
+#footerPan ul li a:hover{text-decoration:underline;}
+
+#footerPan p.copyright{width:204px; background:#F3F3F3; color:#04496D; position:absolute; top:23px; left:40px; font-size:12px;}
+
+#footerPan ul.templateworld{width:250px; background:#F3F3F3; color:#444; display:block; position:absolute; top:40px; left:40px; font-size:10px;}
+#footerPan ul.templateworld li{height:20px;}
+#footerPan ul.templateworld li a{background:#F3F3F3; display:block; color:#444; text-decoration:none;}
+#footerPan ul.templateworld li a:hover{text-decoration:underline;}
+/*----/FOOTER PANEL----*/

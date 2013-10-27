@@ -1,0 +1,19 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div id="footermainPan">
+  <div id="footerPan">
+  	<ul>
+		<li><a href="#">Home</a>| </li>
+		<li><a href="#">About us</a>| </li>
+		<li><a href="#">Support</a>| </li>
+		<li><a href="#">Books</a>| </li>
+		<li><a href="#">University</a>| </li>		
+	</ul>
+	<p class="copyright">©Renap. All right reserved.</p>
+	<ul class="templateworld">
+  	<li>design by:</li>
+	<li><a href="http://www.templateworld.com" target="_blank">Template World</a></li>
+  </ul>
+
+  </div>
+</div>
