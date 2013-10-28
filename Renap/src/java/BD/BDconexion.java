@@ -9,13 +9,16 @@ package BD;
  * @author francisco
  */
 public class BDconexion {
-    public static final int mysql=1;
-    public static String[] configMysql={"umg","root","pass"};
-    
-    public static conexionBD open(int bd){
-      switch (bd)
-          case BDconexion.mysql:
-              return new MySQLconexionBD(configMysql);
-              default:return null;
+//manejador de la bd 
+    public static final int mysql = 1;
+    public static String[] configMysql = {"umg", "root", "pass"};
+
+    public static conexionBD open(int bd) {
+        switch (bd) {
+            case BDconexion.mysql:
+                return new MySQLconexionBD(configMysql);
+            default:
+                return null;
+        }
     }
 }
