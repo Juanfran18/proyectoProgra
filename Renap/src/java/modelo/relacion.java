@@ -113,8 +113,5 @@ public class relacion {
      */
     public void setFechaFinal(Date fechaFinal) {
         this.fechaFinal = fechaFinal;
-    }
-   
-   
-    
+    }   
 }
