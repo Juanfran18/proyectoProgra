@@ -23,11 +23,12 @@ public class DAOPersona {
         try {
             
         } catch (Exception e) {
-            StringBuilder sql = new StringBuilder();
-            sql.append("INSERT INTO persona (CUI,Nombre,Apellido,Sexo,EstadoCivil,"
-                    + "EstatusNacional,FechaDeNacimiento,LugardeNacimiento,"
-                    + "FechaDeDefuncion,LugarDeDefuncion,vecindad,Firma,Foto)"
-                    + " VALUES ()");
+            String sql = ("INSERT INTO persona (CUI,Nombre,Apellido,Sexo,EstadoCivil,EstatusNacional,FechaDeNacimiento,"
+                    + "LugardeNacimiento,FechaDeDefuncion,LugarDeDefuncion,vecindad,Firma,Foto)"
+                    + " VALUES ("+per.getCui()+","+per.getNombre()+","+per.getApellido()+","+per.getSexo()+","
+                    +per.getEstadoCivil()+","+per.getEstatusNacional()+","+per.getFechaNacimiento()+","+per.getIdLugarNacimiento()
+                    +","+per.getFechaDefuncion()+","+per.getIdLugarDefuncion()+","+per.getFirma()+","+per.getFoto()+")");
+            
         }
         
     }
