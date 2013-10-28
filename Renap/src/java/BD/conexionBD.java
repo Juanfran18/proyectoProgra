@@ -35,6 +35,7 @@ public abstract class conexionBD {
             st.executeUpdate(query);
         } catch (SQLException e) {
             save=false;
+            
             e.printStackTrace();
         }
         return save;
