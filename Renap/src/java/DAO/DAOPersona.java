@@ -28,6 +28,7 @@ public class DAOPersona {
                     + " VALUES ("+per.getCui()+","+per.getNombre()+","+per.getApellido()+","+per.getSexo()+","
                     +per.getEstadoCivil()+","+per.getEstatusNacional()+","+per.getFechaNacimiento()+","+per.getIdLugarNacimiento()
                     +","+per.getFechaDefuncion()+","+per.getIdLugarDefuncion()+","+per.getFirma()+","+per.getFoto()+")");
+            this.con.ejecutado(sql);
             
         }
         
