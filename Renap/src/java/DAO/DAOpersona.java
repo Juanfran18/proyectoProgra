@@ -4,10 +4,20 @@
  */
 package DAO;
 
+import BD.BDconexion;
+import BD.conexionBD;
+
 /**
  *
  * @author francisco
  */
 public class DAOpersona {
+    
+    conexionBD con;
+
+    public DAOpersona() {
+        this.con =BDconexion.open(BDconexion.mysql);
+    }
+    
     
 }
