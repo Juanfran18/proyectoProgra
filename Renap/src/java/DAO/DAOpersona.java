@@ -6,6 +6,7 @@ package DAO;
 
 import BD.BDconexion;
 import BD.conexionBD;
+import modelo.persona;
 
 /**
  *
@@ -19,5 +20,13 @@ public class DAOpersona {
         this.con =BDconexion.open(BDconexion.mysql);
     }
     
+    public boolean save(persona per){
+        boolean save =false;
+        try {
+            
+        } catch (Exception e) {
+        }
+        return save;        
+    }            
     
 }
