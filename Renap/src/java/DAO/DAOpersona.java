@@ -23,6 +23,7 @@ public class DAOpersona {
     public boolean save(persona per){
         boolean save =false;
         try {
+            String sql = "INSERT INTO persona()VALUES()";
             
         } catch (Exception e) {
         }
