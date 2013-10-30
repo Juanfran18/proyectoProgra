@@ -31,7 +31,8 @@ public class DAOpersona {
             ResultSet rs = this.con.query(sql);
             while(rs.next()){
                 per.setCui(rs.getString("CUI"));
-                
+                per.setNombre(rs.getString("Nombre"));
+                 per.setApellido(rs.getString("Apellido"));
             }
                 
         } catch (Exception e) {
