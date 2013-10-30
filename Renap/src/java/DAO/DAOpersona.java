@@ -23,8 +23,14 @@ public class DAOpersona {
         this.con = BDconexion.open(BDconexion.mysql);
     }
 
+    public persona edit(String cui){
+        return null;
+        
+    }
+    
     public boolean save(persona per) {
-        boolean save = false;        
+        this.con = BDconexion.open(BDconexion.mysql);
+        boolean save = false;             
         try {
             String sql = "INSERT INTO persona(CUI,Nombre,Apellido,Sexo,EstadoCivil,EstatusNacional,FechaDeNacimiento,"
                     + "LugarDeNacimiento,FechaDeDefuncion,LugarDeDefuncion,Vecindad,Firma,Foto)"
@@ -38,6 +44,8 @@ public class DAOpersona {
         } catch (Exception e) {
             
             Logger.getLogger(DAOpersona.class.getName()).log(Level.SEVERE, null, e);
+        }finally{
+            this.con.cerrar();
         }
         return save;
     }
