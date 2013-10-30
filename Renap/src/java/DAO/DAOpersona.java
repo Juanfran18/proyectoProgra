@@ -24,7 +24,19 @@ public class DAOpersona {
     }
 
     public persona edit(String cui){
-        return null;
+        this.con = BDconexion.open(BDconexion.mysql);
+        persona per = new persona();
+        String sql ="Select * from Persona where CUI="+cui;
+        try {
+            ResultSet rs = this.con.query(sql);
+            while(rs.next()){
+                per.setCui(rs.getString("CUI"));
+                
+            }
+                
+        } catch (Exception e) {
+        }
+        return per;
         
     }
     
