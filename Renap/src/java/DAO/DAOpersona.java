@@ -7,6 +7,8 @@ package DAO;
 import BD.BDconexion;
 import BD.conexionBD;
 import java.sql.ResultSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import modelo.persona;
 
 /**
@@ -34,7 +36,7 @@ public class DAOpersona {
             
 
         } catch (Exception e) {
-            
+            Logger.getLogger(DAOpersona.class.getName()).log(Level.SEVERE, null, e);
         }
         return save;
     }
