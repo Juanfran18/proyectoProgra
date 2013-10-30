@@ -13,21 +13,25 @@ import modelo.persona;
  * @author francisco
  */
 public class DAOpersona {
-    
+
     conexionBD con;
 
     public DAOpersona() {
-        this.con =BDconexion.open(BDconexion.mysql);
+        this.con = BDconexion.open(BDconexion.mysql);
     }
-    
-    public boolean save(persona per){
-        boolean save =false;
+
+    public boolean save(persona per) {
+        boolean save = false;
         try {
-            String sql = "INSERT INTO persona(CUI,Nombre,Apellido,Sexp,EstadoCivil,EstatusNacional,FechaDeNacimiento,)VALUES()";
-            
+            String sql = "INSERT INTO persona(CUI,Nombre,Apellido,Sexo,EstadoCivil,EstatusNacional,FechaDeNacimiento,"
+                    + "LugarDeNacimiento,FechaDeDefuncion,LugarDeDefuncion,Vecindad,Firma,Foto)"
+                    + "VALUES('" + per.getCui() + "','" + per.getNombre() + "','" + per.getApellido() + "','" + per.getSexo() + "','"
+                    + per.getEstadoCivil() + "','" + per.getEstatusNacional() + "','" + per.getFechaNacimiento() + "','"
+                    + per.getIdLugarNacimiento() + "','" + per.getFechaDefuncion() + "','" + per.getIdLugarDefuncion() 
+                    + "','" + per.getIdVecindad()+"','"+per.getFirma()+"','"+per.getFoto()+ "')";
+
         } catch (Exception e) {
         }
-        return save;        
-    }            
-    
+        return save;
+    }
 }
