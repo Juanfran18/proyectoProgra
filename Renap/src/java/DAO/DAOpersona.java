@@ -6,6 +6,7 @@ package DAO;
 
 import BD.BDconexion;
 import BD.conexionBD;
+import java.sql.ResultSet;
 import modelo.persona;
 
 /**
@@ -21,7 +22,7 @@ public class DAOpersona {
     }
 
     public boolean save(persona per) {
-        boolean save = false;
+        boolean save = false;        
         try {
             String sql = "INSERT INTO persona(CUI,Nombre,Apellido,Sexo,EstadoCivil,EstatusNacional,FechaDeNacimiento,"
                     + "LugarDeNacimiento,FechaDeDefuncion,LugarDeDefuncion,Vecindad,Firma,Foto)"
@@ -29,8 +30,11 @@ public class DAOpersona {
                     + per.getEstadoCivil() + "','" + per.getEstatusNacional() + "','" + per.getFechaNacimiento() + "','"
                     + per.getIdLugarNacimiento() + "','" + per.getFechaDefuncion() + "','" + per.getIdLugarDefuncion() 
                     + "','" + per.getIdVecindad()+"','"+per.getFirma()+"','"+per.getFoto()+ "')";
+            this.con.ejecutado(sql);
+            
 
         } catch (Exception e) {
+            
         }
         return save;
     }
