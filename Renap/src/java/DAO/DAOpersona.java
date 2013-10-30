@@ -36,6 +36,7 @@ public class DAOpersona {
             
 
         } catch (Exception e) {
+            
             Logger.getLogger(DAOpersona.class.getName()).log(Level.SEVERE, null, e);
         }
         return save;
