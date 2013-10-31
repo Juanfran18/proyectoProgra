@@ -30,7 +30,7 @@ public class DAOpersona {
                     + "', Sexo='" + per.getSexo() + "', EstadoCivil='" + per.getEstadoCivil() + "', EstatusNacional='" + per.getEstatusNacional()
                     + "', FechaDeNacimiento='" + per.getFechaNacimiento() + "', LugarDeNacimiento='" + per.getIdLugarNacimiento()
                     + "',FechaDeDefuncion='" + per.getFechaDefuncion() + "', LugarDeDefuncion='" + per.getIdLugarDefuncion()
-                    + "', Vecindad='" + per.getIdVecindad() + "' Firma='" + per.getFirma() + "', Foto='" + per.getFoto() + "'";
+                    + "', Vecindad='" + per.getIdVecindad() + "' Firma='" + per.getFirma() + "', Foto='" + per.getFoto() + "'" + " WHERE CUI='"+per.getCui()+"'";
             this.con.ejecutado(sql);
         } catch (Exception e) {
             Logger.getLogger(DAOpersona.class.getName()).log(Level.SEVERE, null, e);
