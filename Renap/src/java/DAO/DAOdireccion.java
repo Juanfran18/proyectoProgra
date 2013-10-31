@@ -5,6 +5,8 @@
 package DAO;
 
 import BD.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import modelo.direccion;
 
 /**
@@ -26,6 +28,7 @@ public class DAOdireccion {
                    + "', Calle='"+direc.getCalle()+"', Avenida='"+direc.getAvenida()+"', NumeroDeCasa='"+direc.getNumeroCasa()+"'"+" Where ID_Direccion='";
            this.con.ejecutado(Sql);
         } catch (Exception e) {
+            Logger.getLogger(DAOpersona.class.getName()).log(Level.SEVERE, null, e);
         }finally{
             this.con.cerrar();
         }
