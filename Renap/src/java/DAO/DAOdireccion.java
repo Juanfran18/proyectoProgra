@@ -21,8 +21,13 @@ public class DAOdireccion {
     public void edit(direccion direc){
         this.con = BDconexion.open(BDconexion.mysql);
         try {
-           String Sql = "UPDATE Direccion SET ";
+           String Sql = "UPDATE Direccion SET Pais='"+direc.getPais()+"' Departamento='"+direc.getDepartamentto()
+                   + "', Municipio='"+direc.getMunicipio()+"', Asentamiento='"+direc.getAsentamiento()+"', Zona='"+direc.getZona()
+                   + "', Calle='"+direc.getCalle()+"', Avenida='"+direc.getAvenida()+"', NumeroDeCasa='"+direc.getNumeroCasa()+"'"+" Where ID_Direccion='";
+           this.con.ejecutado(Sql);
         } catch (Exception e) {
+        }finally{
+            this.con.cerrar();
         }
         
     }
