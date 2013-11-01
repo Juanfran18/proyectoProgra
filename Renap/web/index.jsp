@@ -15,8 +15,7 @@
     <body>
         <%@include file="WEB-INF/jspf/top.jspf" %>
         <div id="body">
-            <h1>Hello World!</h1>
-        </div>        
+        </div>
         <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>

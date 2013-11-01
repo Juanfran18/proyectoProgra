@@ -32,8 +32,7 @@ public class DAOdireccion {
             Logger.getLogger(DAOpersona.class.getName()).log(Level.SEVERE, null, e);
         }finally{
             this.con.cerrar();
-        }
-        
+        }    
     }
     
     public void save(direccion direc){
