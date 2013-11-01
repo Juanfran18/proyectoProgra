@@ -11,8 +11,8 @@
           <div id="topMenuMiddlePan">
                <ul>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="inscripcion.jsp">Inscribir persona</a></li>
-                    <li><a href="consulta.jsp">Consulta</a></li>
+                    <li><a href="ingresopersona.jsp">Inscribir persona</a></li>
+                    <li><a href="formulario.jsp">Consulta</a></li>
                     <li><a href="#">books</a></li>			
                     <li class="contact"><a href="#" class="contact">Contact</a></li>
                </ul>
