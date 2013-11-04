@@ -92,7 +92,7 @@ public class Persona extends HttpServlet {
       per.setSexo(request.getParameter("sexo"));
       per.setEstadoCivil(request.getParameter("estado"));
       per.setEstatusNacional(Integer.parseInt(request.getParameter("nacionalidad")));
-      per.setFechaNacimiento(request.getParameter("fechaNacimiento"));
+      //per.setFechaNacimiento(request.getParameter("fechaNacimiento"));
       per.setIdLugarNacimiento(Integer.parseInt(request.getParameter("lugarN")));
     
       per.setIdVecindad(Integer.parseInt(request.getParameter("vecindad")));      
