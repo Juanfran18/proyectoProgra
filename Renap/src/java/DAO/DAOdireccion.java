@@ -4,11 +4,10 @@
  */
 package DAO;
 
-import BD.*;
+import BD.factory;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.servlet.jsp.tagext.TryCatchFinally;
-import modelo.direccion;
+import modelo.Direccion;
 
 /**
  *
@@ -16,35 +15,32 @@ import modelo.direccion;
  */
 public class DAOdireccion {
 
-    conexionBD con;
+     factory fac;
+
     public DAOdireccion() {
-        this.con=BDconexion.open(BDconexion.mysql);        
+        fac = new factory();
     }
+
     
-    public void edit(direccion direc){
-        this.con = BDconexion.open(BDconexion.mysql);
+    public void edit(Direccion direc){      
         try {
            String Sql = "UPDATE Direccion SET Pais='"+direc.getPais()+"', Departamento='"+direc.getDepartamentto()
                    + "', Municipio='"+direc.getMunicipio()+"', Asentamiento='"+direc.getAsentamiento()+"', Zona='"+direc.getZona()
                    + "', Calle='"+direc.getCalle()+"', Avenida='"+direc.getAvenida()+"', NumeroDeCasa='"+direc.getNumeroCasa()+"'"+" Where ID_Direccion='";
-           this.con.ejecutado(Sql);
+           fac.ejecutado(Sql);
         } catch (Exception e) {
-            Logger.getLogger(DAOpersona.class.getName()).log(Level.SEVERE, null, e);
-        }finally{
-            this.con.cerrar();
-        }    
+            Logger.getLogger(DAOPersona.class.getName()).log(Level.SEVERE, null, e);
+        }  
     }
     
-    public void save(direccion direc){
+    public void save(Direccion direc){
         try {
             String Sql = "INSERT INTO Direccion (Pais, Departamento, Municipio, Asentamiento, Zona, Calle, Avenida, NumeroDeCasa)+"
                 + "values('"+direc.getPais()+"','"+direc.getDepartamentto()+"','"+direc.getMunicipio()+"','"+direc.getAsentamiento()
                 +"','"+direc.getZona()+"','"+direc.getCalle()+"','"+direc.getAvenida()+"','"+direc.getNumeroCasa()+"')";  
-            this.con.ejecutado(Sql);
+            fac.ejecutado(Sql);
         } catch (Exception e) {
-            Logger.getLogger(DAOpersona.class.getName()).log(Level.SEVERE, null, e);
-        }finally{
-            this.con.cerrar();
+            Logger.getLogger(DAOPersona.class.getName()).log(Level.SEVERE, null, e);
         }
                    
     }

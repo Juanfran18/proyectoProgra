@@ -41,7 +41,7 @@
                         <ul class="menu">
                             
                             <li><a class="active" href="index">A</a></li>
-                            <li><a href="persona?op=nuevo">NUEVO</a></li>
+                            <li><a href="<%= request.getContextPath() %>/persona?op=nuevo">NUEVO</a></li>
                             <li><a href="mision_vision.jsp">CONSULTAS</a></li>
                             <li><a href="valores.jsp">REPORTES</a></li>
                             <li><a href="formulario.jsp">CONTACTANOS</a></li>
