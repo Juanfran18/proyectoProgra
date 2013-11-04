@@ -88,13 +88,14 @@ public class Persona extends HttpServlet {
        
       persona per = new persona();
       per.setNombre(request.getParameter("nombre"));
-      per.setNombre(request.getParameter("apellido"));
-      per.setNombre(request.getParameter("sexo"));
-      per.setNombre(request.getParameter("estado"));
-      per.setNombre(request.getParameter("nacionalidad"));
-      per.setNombre(request.getParameter("fechaNacimiento"));
-      per.setNombre(request.getParameter("lugarN"));
-      per.setNombre(request.getParameter("vecindad"));      
+      per.setApellido(request.getParameter("apellido"));
+      per.setSexo(request.getParameter("sexo"));
+      per.setEstadoCivil(request.getParameter("estado"));
+      per.setEstatusNacional(Integer.parseInt(request.getParameter("nacionalidad")));
+      per.setFechaNacimiento(request.getParameter("fechaNacimiento"));
+      per.setIdLugarNacimiento(Integer.parseInt(request.getParameter("lugarN")));
+    
+      per.setIdVecindad(Integer.parseInt(request.getParameter("vecindad")));      
       DAOpersona daop = new DAOpersona();
       daop.save(per);
     }
