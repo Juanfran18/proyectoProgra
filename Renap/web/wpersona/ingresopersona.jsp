@@ -63,17 +63,17 @@
                                         
 										
                                         <p align="center" >								
-		<form id="nuevaper" name="frapersona" method="post" action="ingresopersona.jsp">
+                                        <form id="nuevaper" name="frapersona" method="post" action="<%=request.getContextPath()%>/persona">>
 			<table>
 				<hr>
 				<TR>
 				   <TD>Nombre:</TD>
                                    
-				   <TD><INPUT TYPE="text" NAME="txtnombre" SIZE="20" MAXLENGTH="30" id="nombre"></TD>
+				   <TD><INPUT TYPE="text" NAME="txtnombre" SIZE="20" MAXLENGTH="30" id="nombre" value=""></TD>
 				</TR>
 				<TR>
 				   <TD>Apellido:</TD>
-				   <TD><INPUT TYPE="text" NAME="txtapellido" SIZE="20" MAXLENGTH="30" id="apellido"></TD>
+				   <TD><INPUT TYPE="text" NAME="txtapellido" SIZE="20" MAXLENGTH="30" id="apellido" value=""></TD>
 				</TR>
 				<TR>
 				   <TD>Sexo:</TD>
@@ -83,7 +83,7 @@
 				<TR>
 				   <TD>Estado Civil:</TD>
                                    <td>
-                                <select name ="estado" id="estado">
+                                <select name ="estado" id="estado"value="">
                                     
                                     <option> Soltero </option>
                                     <option> Casado </option>
@@ -93,27 +93,27 @@
 				</TR>
 				<TR>
 				   <TD>Nacionalidad:</TD>
-				   <TD><INPUT TYPE="text" NAME="txtmarca" SIZE="20" MAXLENGTH="30" id="nacionalidad"></TD>
+				   <TD><INPUT TYPE="text" NAME="txtmarca" SIZE="20" MAXLENGTH="30" id="nacionalidad" value=""></TD>
 				</TR>
 				<TR>
 				   <TD>Fecha de Nacimiento:</TD>
-				   <TD><INPUT TYPE="text" NAME="txtanio" SIZE="20" MAXLENGTH="30" id="fechaNacimiento"></TD>
+				   <TD><INPUT TYPE="text" NAME="txtanio" SIZE="20" MAXLENGTH="30" id="fechaNacimiento" value=""></TD>
 				</TR>
 				<TR>
 				   <TD>Lugar de Nacimiento:</TD>
-				   <TD><INPUT TYPE="text" NAME="txtcolor" SIZE="20" MAXLENGTH="30" id="lugarN"></TD>
+				   <TD><INPUT TYPE="text" NAME="txtcolor" SIZE="20" MAXLENGTH="30" id="lugarN" value=""></TD>
 				</TR>
 				<TR>
 				   <TD>Vecindad:</TD>
-				   <TD><INPUT TYPE="text" NAME="txtsolicitud" SIZE="20" MAXLENGTH="30" id="vecindad"></TD>
+				   <TD><INPUT TYPE="text" NAME="txtsolicitud" SIZE="20" MAXLENGTH="30" id="vecindad" value=""></TD>
 				</TR>
 				<TR>
 				   <TD>Foto:</TD>
-				   <TD><INPUT TYPE="text" NAME="txtentrega" SIZE="20" MAXLENGTH="30" id="foto"></TD>
+				   <TD><INPUT TYPE="text" NAME="txtentrega" SIZE="20" MAXLENGTH="30" id="foto" value=""></TD>
 				</TR>
 				<TR>
                                 <TD>Firma:</TD>
-				   <TD><INPUT TYPE="text" NAME="txtentrega" SIZE="20" MAXLENGTH="30" id="firma"></TD>
+				   <TD><INPUT TYPE="text" NAME="txtentrega" SIZE="20" MAXLENGTH="30" id="firma" value=""></TD>
 				</TR>
 				<TR>    
                                     
