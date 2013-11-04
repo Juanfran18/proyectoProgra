@@ -11,7 +11,7 @@ package BD;
 public class BDconexion {
 //manejador de la bd 
     public static final int mysql = 1;
-    public static String[] configMysql = {"umg", "root", "pass"};
+    public static String[] configMysql = {"renap", "root", ""};
 
     public static conexionBD open(int bd) {
         switch (bd) {
