@@ -97,8 +97,8 @@ public class Persona extends HttpServlet {
         per.setApellido(request.getParameter("apellido"));
         per.setSexo(request.getParameter("sexo"));
         per.setEstadoCivil(request.getParameter("estado"));
-        per.setEstatusNacional(Integer.parseInt(request.getParameter("nacionalidad")));
-        SimpleDateFormat formatoDelTexto = new SimpleDateFormat("yyyy-MM-dd");
+        per.setEstatusNacional(Integer.parseInt(request.getParameter("nacionalidad")));       
+        SimpleDateFormat formatoDelTexto = new SimpleDateFormat("dd-MM-yyyy");
         String strFecha = request.getParameter("fechaNacimiento");
         Date fecha = null;
         try {
