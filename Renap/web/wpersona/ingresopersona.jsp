@@ -63,27 +63,27 @@
                                         
 										
                                         <p align="center" >								
-		<form name="frapersona" method="post" action="ingresopersona.jsp">
+		<form id="nuevaper" name="frapersona" method="post" action="ingresopersona.jsp">
 			<table>
 				<hr>
 				<TR>
 				   <TD>Nombre:</TD>
                                    
-				   <TD><INPUT TYPE="text" NAME="txtnombre" SIZE="20" MAXLENGTH="30"></TD>
+				   <TD><INPUT TYPE="text" NAME="txtnombre" SIZE="20" MAXLENGTH="30" id="nombre"></TD>
 				</TR>
 				<TR>
 				   <TD>Apellido:</TD>
-				   <TD><INPUT TYPE="text" NAME="txtapellido" SIZE="20" MAXLENGTH="30"></TD>
+				   <TD><INPUT TYPE="text" NAME="txtapellido" SIZE="20" MAXLENGTH="30" id="apellido"></TD>
 				</TR>
 				<TR>
 				   <TD>Sexo:</TD>
-                                   <TD><INPUT TYPE="radio" NAME="masculino" value="M" checked="M" ><b>Masculino</b> </TD>
-                                   <TD><INPUT TYPE="radio" NAME="femenino"  value="F" ><b>Femnino</b> </TD> 				
+                                   <TD><INPUT TYPE="radio" NAME="masculino" value="M" checked="M" id="sexo"><b>Masculino</b> </TD>
+                                   <TD><INPUT TYPE="radio" NAME="femenino"  value="F" id="sexo"><b>Femnino</b> </TD> 				
                                 </TR>
 				<TR>
 				   <TD>Estado Civil:</TD>
                                    <td>
-                                <select name ="estado">
+                                <select name ="estado" id="estado">
                                     
                                     <option> Soltero </option>
                                     <option> Casado </option>
@@ -93,27 +93,27 @@
 				</TR>
 				<TR>
 				   <TD>Nacionalidad:</TD>
-				   <TD><INPUT TYPE="text" NAME="txtmarca" SIZE="20" MAXLENGTH="30"></TD>
+				   <TD><INPUT TYPE="text" NAME="txtmarca" SIZE="20" MAXLENGTH="30" id="nacionalidad"></TD>
 				</TR>
 				<TR>
 				   <TD>Fecha de Nacimiento:</TD>
-				   <TD><INPUT TYPE="text" NAME="txtanio" SIZE="20" MAXLENGTH="30"></TD>
+				   <TD><INPUT TYPE="text" NAME="txtanio" SIZE="20" MAXLENGTH="30" id="fechaNacimiento"></TD>
 				</TR>
 				<TR>
 				   <TD>Lugar de Nacimiento:</TD>
-				   <TD><INPUT TYPE="text" NAME="txtcolor" SIZE="20" MAXLENGTH="30"></TD>
+				   <TD><INPUT TYPE="text" NAME="txtcolor" SIZE="20" MAXLENGTH="30" id="lugarN"></TD>
 				</TR>
 				<TR>
 				   <TD>Vecindad:</TD>
-				   <TD><INPUT TYPE="text" NAME="txtsolicitud" SIZE="20" MAXLENGTH="30"></TD>
+				   <TD><INPUT TYPE="text" NAME="txtsolicitud" SIZE="20" MAXLENGTH="30" id="vecindad"></TD>
 				</TR>
 				<TR>
 				   <TD>Foto:</TD>
-				   <TD><INPUT TYPE="text" NAME="txtentrega" SIZE="20" MAXLENGTH="30"></TD>
+				   <TD><INPUT TYPE="text" NAME="txtentrega" SIZE="20" MAXLENGTH="30" id="foto"></TD>
 				</TR>
 				<TR>
                                 <TD>Firma:</TD>
-				   <TD><INPUT TYPE="text" NAME="txtentrega" SIZE="20" MAXLENGTH="30"></TD>
+				   <TD><INPUT TYPE="text" NAME="txtentrega" SIZE="20" MAXLENGTH="30" id="firma"></TD>
 				</TR>
 				<TR>    
                                     
