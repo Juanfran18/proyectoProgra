@@ -7,6 +7,11 @@ package controlador;
 import DAO.DAOpersona;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -39,13 +44,13 @@ public class Persona extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Persona</title>");            
+            out.println("<title>Servlet Persona</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Persona at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
-        } finally {            
+        } finally {
             out.close();
         }
     }
@@ -63,14 +68,14 @@ public class Persona extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       String op=request.getParameter("op");
-       String pagina;
-       if (op.equals("nuevo")){
-           pagina = "/wpersona/ingresopersona.jsp";
-           RequestDispatcher dispacher = getServletContext().getRequestDispatcher(pagina);
-           dispacher.forward(request, response);
-       }
-           
+        String op = request.getParameter("op");
+        String pagina;
+        if (op.equals("nuevo")) {
+            pagina = "/wpersona/ingresopersona.jsp";
+            RequestDispatcher dispacher = getServletContext().getRequestDispatcher(pagina);
+            dispacher.forward(request, response);
+        }
+
     }
 
     /**
@@ -85,19 +90,27 @@ public class Persona extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
-      persona per = new persona();
-      per.setNombre(request.getParameter("nombre"));
-      per.setApellido(request.getParameter("apellido"));
-      per.setSexo(request.getParameter("sexo"));
-      per.setEstadoCivil(request.getParameter("estado"));
-      per.setEstatusNacional(Integer.parseInt(request.getParameter("nacionalidad")));
-      //per.setFechaNacimiento(request.getParameter("fechaNacimiento"));
-      per.setIdLugarNacimiento(Integer.parseInt(request.getParameter("lugarN")));
-    
-      per.setIdVecindad(Integer.parseInt(request.getParameter("vecindad")));      
-      DAOpersona daop = new DAOpersona();
-      daop.save(per);
+
+        persona per = new persona();
+        per.setCui(request.getParameter("cui"));
+        per.setNombre(request.getParameter("nombre"));
+        per.setApellido(request.getParameter("apellido"));
+        per.setSexo(request.getParameter("sexo"));
+        per.setEstadoCivil(request.getParameter("estado"));
+        per.setEstatusNacional(Integer.parseInt(request.getParameter("nacionalidad")));
+        SimpleDateFormat formatoDelTexto = new SimpleDateFormat("yyyy-MM-dd");
+        String strFecha = request.getParameter("fechaNacimiento");
+        Date fecha = null;
+        try {
+            fecha = formatoDelTexto.parse(strFecha);
+        } catch (ParseException ex) {
+            Logger.getLogger(Persona.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        per.setFechaNacimiento(fecha);//tipo fecha
+        per.setIdLugarNacimiento(Integer.parseInt(request.getParameter("lugarN")));
+        per.setIdVecindad(Integer.parseInt(request.getParameter("vecindad")));
+        DAOpersona daop = new DAOpersona();
+        daop.save(per);
     }
 
     /**
