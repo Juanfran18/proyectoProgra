@@ -110,7 +110,7 @@ public class Persona extends HttpServlet {
         per.setIdLugarNacimiento(Integer.parseInt(request.getParameter("lugarN")));
         per.setIdVecindad(Integer.parseInt(request.getParameter("vecindad")));
         DAOpersona daop = new DAOpersona();
-        daop.save(per);
+        daop.registrar(per);
     }
 
     /**
