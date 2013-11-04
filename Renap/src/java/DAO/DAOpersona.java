@@ -38,6 +38,27 @@ public class DAOpersona {
 
     }
 
+    public boolean registrar(persona per) {
+        this.con = BDconexion.open(BDconexion.mysql);
+        boolean save = false;
+        try {
+            String sql = "INSERT INTO persona(CUI,Nombre,Apellido,Sexo,EstadoCivil,EstatusNacional,FechaDeNacimiento,"
+                    + "LugarDeNacimiento, Vecindad,Firma,Foto)"
+                    + "VALUES('" + per.getCui() + "','" + per.getNombre() + "','" + per.getApellido() + "','" + per.getSexo() + "','"
+                    + per.getEstadoCivil() + "','" + per.getEstatusNacional() + "','" + per.getFechaNacimiento() + "','"
+                    + per.getIdLugarNacimiento() + "','" + per.getIdVecindad() + "','" + per.getFirma() + "','" + per.getFoto() + "')";
+            this.con.ejecutado(sql);
+
+
+        } catch (Exception e) {
+
+            Logger.getLogger(DAOpersona.class.getName()).log(Level.SEVERE, null, e);
+        } finally {
+            this.con.cerrar();
+        }
+        return save;
+    }
+    /*
     public boolean save(persona per) {
         this.con = BDconexion.open(BDconexion.mysql);
         boolean save = false;
@@ -58,5 +79,5 @@ public class DAOpersona {
             this.con.cerrar();
         }
         return save;
-    }
+    }*/
 }
