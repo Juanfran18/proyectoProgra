@@ -85,6 +85,7 @@ public class Persona extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+       
       persona per = new persona();
       per.setNombre(request.getParameter("nombre"));
       per.setNombre(request.getParameter("apellido"));
