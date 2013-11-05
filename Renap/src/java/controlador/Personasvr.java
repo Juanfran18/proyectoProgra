@@ -109,12 +109,12 @@ public class Personasvr extends HttpServlet {
 	String dateInString = request.getParameter("fechaDeNacimiento");   
         try {            
            Date date = formatter.parse(dateInString);
-           per.setFechaNacimiento(date);
+           per.setFechaDeNacimiento(date);
         } catch (ParseException ex) {
             Logger.getLogger(Personasvr.class.getName()).log(Level.SEVERE, null, ex);
         }
         //tipo fecha
-        per.setIdLugarNacimiento(Integer.parseInt(request.getParameter("lugarN")));
+        per.setIdLugarN(Integer.parseInt(request.getParameter("lugarN")));
         per.setIdVecindad(Integer.parseInt(request.getParameter("vecindad")));
         
         DAOPersona daop = new DAOPersona();
