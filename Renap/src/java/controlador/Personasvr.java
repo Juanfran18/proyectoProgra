@@ -17,7 +17,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.Persona;
+import modelo.Person;
+
 
 /**
  *
@@ -90,7 +91,7 @@ public class Personasvr extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Persona per = new Persona();
+        Person per = new Person();
         per.setCui("hola_");
         per.setNombre(request.getParameter("nombre"));
         per.setApellido(request.getParameter("apellido"));
