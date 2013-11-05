@@ -91,7 +91,7 @@ public class Personasvr extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         Persona per = new Persona();
-        per.setCui("hola_Edvin_yo_soy_Tu_Controlador_jajaja");
+        per.setCui("hola_");
         per.setNombre(request.getParameter("nombre"));
         per.setApellido(request.getParameter("apellido"));
         per.setSexo(request.getParameter("sexo"));
